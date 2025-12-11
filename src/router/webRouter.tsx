@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DefaultPage from "../app/page";
 import Aula0 from "../app/aulas/fudDevWeb/aula0";
 import Aula1 from "../app/aulas/fudDevWeb/aula1";
+import Aula2 from "../app/aulas/fudDevWeb/aula2";
 
 export default function WebRouter() {
   return (
@@ -17,6 +18,10 @@ export default function WebRouter() {
           <Route
             path="aulas/fundamentosdedesenvolvimentoweb/aula1"
             element={<Aula1 />}
+          />
+          <Route
+            path="aulas/fundamentosdedesenvolvimentoweb/aula2"
+            element={<Aula2 />}
           />
         </Route>
       </Routes>

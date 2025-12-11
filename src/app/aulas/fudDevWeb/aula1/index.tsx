@@ -3,7 +3,6 @@
 import CodeBlock from "@/src/components/codeBlock";
 import LayoutAula from "@/src/components/layoutAula";
 
-
 export default function Aula1() {
   return (
     <LayoutAula titulo="Aula 1 – História da Internet, WWW, Hipertexto e Introdução ao HTML">
@@ -129,7 +128,11 @@ export default function Aula1() {
             </li>
             <li>Primeiro navegador web</li>
             <li>
-              Primeira página da web: <code>http://info.cern.ch</code>
+              Primeira página da web:{" "}
+              <a className="text-blue-500 hover:text-blue-600 transition-all"
+               href="http://info.cern.ch" target="_blank">
+                http://info.cern.ch
+              </a>
             </li>
           </ul>
         </div>
