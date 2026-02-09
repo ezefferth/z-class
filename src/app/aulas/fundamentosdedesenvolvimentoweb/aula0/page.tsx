@@ -2,7 +2,7 @@
 
 import LayoutAula from "@/src/components/layoutAula";
 
-export default function Aula0() {
+export default function Page() {
   return (
     <LayoutAula titulo="Aula 0 – Apresentação da Disciplina">
       <section className="space-y-8">

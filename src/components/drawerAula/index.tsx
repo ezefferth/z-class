@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
 
 interface DrawerAulasProps {
@@ -43,11 +43,11 @@ export default function DrawerAulas({
   mobileOpen,
   handleDrawerToggle,
 }: DrawerAulasProps) {
-  const navigate = useNavigate();
-  const location = useLocation();
+  const router = useRouter();
+  const pathname = usePathname();
 
   // disciplina e aula atualmente ativa pela rota
-  const pathParts = location.pathname.split("/").filter(Boolean);
+  const pathParts = pathname.split("/").filter(Boolean);
   const activeDiscSlug = pathParts[1]; // /aulas/[disciplina]/[aula]
   const activeAulaSlug = pathParts[2];
 
@@ -111,7 +111,7 @@ export default function DrawerAulas({
                           },
                         }}
                         onClick={() =>
-                          navigate(`/aulas/${disciplinaSlug}/${aulaSlug}`)
+                          router.push(`/aulas/${disciplinaSlug}/${aulaSlug}`)
                         }
                       >
                         <ListItemText primary={aula} />

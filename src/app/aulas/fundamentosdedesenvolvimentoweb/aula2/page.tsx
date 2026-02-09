@@ -1,12 +1,22 @@
 "use client";
 
-import CodeBlock from "@/src/components/codeBlock";
-import CodeBlockRunner from "@/src/components/codeEditorRunner";
-import CodeEditorRunner from "@/src/components/codeEditorRunner";
-import CodeRunner from "@/src/components/codeRunner";
-import LayoutAula from "@/src/components/layoutAula";
+// import dynamic from 'next/dynamic';
 
-export default function Aula2() {
+// const CodeBlockRunner = dynamic(
+//   () => import("@/src/components/codeEditorRunner"), 
+//   { ssr: false, loading: () => <p>Carregando editor...</p> }
+// );
+
+// const CodeEditorRunner = dynamic(
+//   () => import("@/src/components/codeEditorRunner"), 
+//   { ssr: false, loading: () => <p>Carregando editor...</p> }
+// );
+
+import LayoutAula from "@/src/components/layoutAula";
+import CodeBlockRunner from '@/src/components/codeEditorRunner';
+import CodeEditorRunner from '@/src/components/codeEditorRunner'
+
+export default function Page() {
   return (
     <LayoutAula titulo="Aula 2 – Fundamentos Essenciais do HTML: Estrutura, Semântica e Construção de Conteúdo">
       <section className="space-y-10">
@@ -596,13 +606,13 @@ export default function Aula2() {
         </div>
 
         {/* ATIVIDADE */}
-<div className="p-6">
+        <div className="p-6">
           <h2 className="text-2xl font-bold mb-4">8. Atividade Prática: O Site do Restaurante</h2>
           <p className="mb-4">
-            Agora vamos elevar o nível. Você foi contratado para criar a estrutura da página inicial 
+            Agora vamos elevar o nível. Você foi contratado para criar a estrutura da página inicial
             de um restaurante. O cliente exigiu que o site tenha <strong>navegação, cardápio, uma receita destaque e formulário de reserva</strong>.
           </p>
-          
+
           <p className="mb-4">
             <strong>Requisitos Obrigatórios:</strong>
           </p>
@@ -702,7 +712,7 @@ export default function Aula2() {
             Você deve ter notado que, sem CSS, as páginas parecem documentos simples do Word.
           </p>
           <p className="mt-3">
-            Na <strong>Aula 2</strong>, entraremos no mundo do <strong>CSS</strong>.
+            Na <strong>Aula 3</strong>, entraremos no mundo do <strong>CSS</strong>.
             Lá aprenderemos a pegar essa estrutura que criamos hoje e transformar em layouts
             coloridos, organizados e profissionais.
           </p>

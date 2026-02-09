@@ -1,9 +1,14 @@
 "use client";
+import dynamic from 'next/dynamic';
 
-import CodeBlock from "@/src/components/codeBlock";
+const CodeBlock = dynamic(
+  () => import("@/src/components/codeEditorRunner"), 
+  { ssr: false, loading: () => <p>Carregando editor...</p> }
+);
+
 import LayoutAula from "@/src/components/layoutAula";
 
-export default function Aula1() {
+export default function Page() {
   return (
     <LayoutAula titulo="Aula 1 – História da Internet, WWW, Hipertexto e Introdução ao HTML">
       <section className="space-y-10">
@@ -206,7 +211,7 @@ export default function Aula1() {
           </h2>
 
           <CodeBlock
-            language="html"
+            // language="html"
             initialCode={`<!DOCTYPE html>
 <html>
   <head>
@@ -253,7 +258,7 @@ export default function Aula1() {
           </p>
 
           <CodeBlock
-            language="html"
+            // language="html"
             initialCode={`<h1>Título principal</h1>
 <h2>Seção</h2>
 <h3>Subseção</h3>`}
@@ -269,7 +274,7 @@ export default function Aula1() {
             exibidos no navegador.
           </p>
 
-          <CodeBlock language="html" initialCode={`<!-- Isto é um comentário -->`} />
+          <CodeBlock initialCode={`<!-- Isto é um comentário -->`} />
         </div>
 
         {/* LISTAS */}
@@ -283,7 +288,7 @@ export default function Aula1() {
           </p>
 
           <CodeBlock
-            language="html"
+            // language="html"
             initialCode={`<ul>
   <li>Item 1</li>
   <li>Item 2</li>
