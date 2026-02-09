@@ -130,7 +130,7 @@ export default function Aula1() {
             <li>
               Primeira página da web:{" "}
               <a className="text-blue-500 hover:text-blue-600 transition-all"
-               href="http://info.cern.ch" target="_blank">
+                href="http://info.cern.ch" target="_blank">
                 http://info.cern.ch
               </a>
             </li>
@@ -207,7 +207,7 @@ export default function Aula1() {
 
           <CodeBlock
             language="html"
-            code={`<!DOCTYPE html>
+            initialCode={`<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8"/>
@@ -254,7 +254,7 @@ export default function Aula1() {
 
           <CodeBlock
             language="html"
-            code={`<h1>Título principal</h1>
+            initialCode={`<h1>Título principal</h1>
 <h2>Seção</h2>
 <h3>Subseção</h3>`}
           />
@@ -269,7 +269,7 @@ export default function Aula1() {
             exibidos no navegador.
           </p>
 
-          <CodeBlock language="html" code={`<!-- Isto é um comentário -->`} />
+          <CodeBlock language="html" initialCode={`<!-- Isto é um comentário -->`} />
         </div>
 
         {/* LISTAS */}
@@ -284,7 +284,7 @@ export default function Aula1() {
 
           <CodeBlock
             language="html"
-            code={`<ul>
+            initialCode={`<ul>
   <li>Item 1</li>
   <li>Item 2</li>
   <li>Item 3</li>
