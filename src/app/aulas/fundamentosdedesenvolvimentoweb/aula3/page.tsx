@@ -270,11 +270,89 @@ export default function Page() {
 </html>`}
           />
         </div>
+        {/* HEAD PROFISSIONAL */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4">
+            7. A Seção &lt;head&gt;
+          </h2>
+
+          <p>
+            A tag <code>&lt;head&gt;</code> não aparece visualmente na página,
+            mas é uma das partes mais importantes do HTML. Ela define:
+          </p>
+
+          <ul className="list-disc ml-6 mt-3 space-y-1">
+            <li>Configurações de codificação</li>
+            <li>Responsividade</li>
+            <li>SEO (Otimização para buscadores)</li>
+            <li>Compartilhamento em redes sociais</li>
+            <li>Importação de CSS e JavaScript</li>
+            <li>Ícones e identidade do site</li>
+          </ul>
+
+          <h3 className="text-xl font-semibold mt-6">
+            Exemplo Completo de Head
+          </h3>
+
+          <CodeBlockRunner
+            height={750}
+            initialCode={`<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <!-- Codificação de caracteres -->
+  <meta charset="UTF-8">
+
+  <!-- Responsividade para dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Básico -->
+  <meta name="description" content="Curso profissional de HTML e desenvolvimento web">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Web">
+  <meta name="author" content="Professor">
+  <meta name="robots" content="index, follow">
+
+  <!-- Cor do navegador no mobile -->
+  <meta name="theme-color" content="#2563eb">
+
+  <!-- Open Graph (Compartilhamento em redes sociais) -->
+  <meta property="og:title" content="Curso HTML 2025">
+  <meta property="og:description" content="Aprenda HTML do zero ao profissional">
+  <meta property="og:type" content="website">
+
+  <!-- Ícone do site -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Conexão antecipada para performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Importação de fonte externa -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Script com defer (boa prática) -->
+  <script src="script.js" defer></script>
+
+  <title>Curso HTML Profissional</title>
+
+</head>
+
+<body>
+
+  <h1>Exemplo de Head Profissional</h1>
+  <p>Observe como o head contém diversas configurações estratégicas.</p>
+
+</body>
+</html>`}
+          />
+        </div>
 
         {/* ATIVIDADE FINAL GRANDE */}
         <div className="p-6">
           <h2 className="text-2xl font-bold mb-4">
-            7. Atividade Prática – Sistema de Evento Acadêmico
+            8. Atividade Prática – Sistema de Evento Acadêmico
           </h2>
 
           <p className="mb-4">
@@ -341,9 +419,11 @@ export default function Page() {
           />
         </div>
 
+
+
         {/* CONCLUSÃO */}
         <div>
-          <h2 className="text-2xl font-bold mb-4">8. Conclusão</h2>
+          <h2 className="text-2xl font-bold mb-4">9. Conclusão</h2>
 
           <p>
             Agora seu HTML está estruturado em nível profissional.
