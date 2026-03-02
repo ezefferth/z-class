@@ -28,6 +28,10 @@ const disciplinas = {
     "Aula 2",
     "Aula 3",
   ],
+  "Análise de Algoritmos": [
+    "Aula 1",
+    "Aula 2"
+  ]
 };
 
 export function slugify(text: string): string {
