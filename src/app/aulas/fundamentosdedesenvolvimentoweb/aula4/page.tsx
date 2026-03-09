@@ -364,20 +364,57 @@ export default function Aula4IntroducaoCSS() {
         {/* ATIVIDADE FINAL (1 HORA) */}
         <div className="bg-gray-800 text-white p-8 rounded-xl shadow-lg mt-10">
           <h2 className="text-3xl font-bold mb-4 text-green-400">
-            8. Desafio Prático: O Cartão de Perfil Moderno
+            8. Desafio Prático Avançado: Cartão de Perfil Profissional
           </h2>
+
           <p className="mb-4 text-lg">
-            Sua missão é criar um <strong>Profile Card (Cartão de Perfil)</strong> estilizado.
-            Você vai aplicar divisões de HTML, Box Model, Tipografia e muito <strong>Flexbox</strong>.
+            Agora você deverá criar um <strong>Cartão de Perfil moderno</strong> utilizando
+            HTML e CSS. Esta atividade reúne praticamente tudo que aprendemos até aqui:
+            <strong> Box Model, tipografia, alinhamento e Flexbox.</strong>
+          </p>
+
+          <p className="mb-4">
+            O objetivo é transformar um HTML simples em um cartão visualmente agradável,
+            semelhante aos perfis encontrados em redes sociais ou portfólios profissionais.
           </p>
 
           <p className="mb-2 text-green-300 font-bold">Requisitos da Atividade:</p>
+
           <ul className="list-disc ml-6 space-y-2 mb-8 text-sm text-gray-300">
-            <li>Use <code>margin: 0 auto;</code> na classe <code>.cartao-perfil</code> para centralizar o cartão na página.</li>
-            <li>Adicione uma imagem circular usando <code>border-radius: 50%</code>.</li>
-            <li><strong>Flexbox na Prática:</strong> A área de "Estatísticas" deve ter <code>display: flex</code> e usar <code>justify-content: space-around</code> para separar uniformemente os números.</li>
-            <li>Crie um botão estilizado com <code>padding</code>, sem bordas, com cor de fundo e cantos arredondados.</li>
+            <li>
+              Centralize o cartão utilizando <code>margin: 0 auto</code>.
+            </li>
+
+            <li>
+              Utilize <strong>Box Model</strong> para adicionar
+              <code> padding</code>, <code>border-radius</code> e
+              <code> box-shadow</code> no cartão.
+            </li>
+
+            <li>
+              Transforme a foto em um círculo utilizando
+              <code> border-radius: 50%</code>.
+            </li>
+
+            <li>
+              A seção de estatísticas deve usar <strong>Flexbox</strong> com
+              <code> display: flex</code> e
+              <code> justify-content: space-around</code>.
+            </li>
+
+            <li>
+              O botão deve possuir:
+              <code> padding</code>, <code>background-color</code>,
+              <code> border-radius</code> e <code>cursor: pointer</code>.
+            </li>
+
           </ul>
+
+          <p className="mb-6 text-yellow-300 font-semibold">
+            🔎 Desafio Extra (Opcional):
+            Adicione uma <strong>animação suave</strong> utilizando
+            <code> transition</code> no botão e na imagem de perfil.
+          </p>
 
           <CodeBlockRunner
             height={650}
@@ -385,66 +422,146 @@ export default function Aula4IntroducaoCSS() {
 <html>
 <head>
 <style>
-  body {
-    background-color: #cbd5e1; font-family: 'Arial', sans-serif; padding: 50px;
-  }
 
-  /* 1. O Cartão Principal */
-  .cartao-perfil {
-    background-color: white; max-width: 350px;
-    margin: 0 auto; /* Centraliza na tela */
-    /* Seu código: Adicione padding, bordas arredondadas e sombra (box-shadow) */
-    
-  }
+body {
+  background-color: #cbd5e1;
+  font-family: Arial, sans-serif;
+  padding: 50px;
+}
 
-  /* 2. Imagem */
-  .foto {
-    width: 120px; height: 120px;
-    /* Seu código: Faça a foto ficar redonda e com margin-bottom */
-    
-  }
+/* 1. Cartão principal */
+.cartao-perfil {
 
-  .textos { text-align: center; }
+  /* Defina largura máxima */
 
-  /* 3. Flexbox em Ação nas Estatísticas */
-  .estatisticas {
-    /* Seu código: ative o flex e use justify-content para espaçar */
-    
-    margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;
-  }
+  /* Centralize na tela */
 
-  /* 4. Estilize o Botão */
-  .btn-seguir {
-    /* Seu código: fundo azul, texto branco, padding, sem borda e pointer */
-    
-  }
+  /* Cor de fundo */
+
+  /* Padding */
+
+  /* Bordas arredondadas */
+
+  /* Sombra */
+}
+
+/* 2. Imagem de perfil */
+.foto {
+
+  width: 120px;
+  height: 120px;
+
+  /* Tornar imagem circular */
+
+  /* Evitar distorção */
+
+  /* Centralizar imagem */
+
+  /* Espaçamento inferior */
+
+  /* Transição suave */
+
+
+  /* aumentar levemente o tamanho */
+
+}
+
+/* Área de textos */
+.textos {
+
+  /* alinhar texto ao centro */
+
+}
+
+/* 3. Estatísticas */
+.estatisticas {
+
+  margin-top: 20px;
+
+  /* Ativar Flexbox */
+
+  /* Distribuir elementos */
+
+  /* Alinhar verticalmente */
+
+  border-top: 1px solid #eee;
+
+  padding-top: 15px;
+
+}
+
+/* 4. Botão */
+.btn-seguir {
+
+  /* Cor de fundo */
+
+  /* Cor do texto */
+
+  /* Padding */
+
+  /* Remover borda */
+
+  /* Bordas arredondadas */
+
+  /* Cursor pointer */
+
+  /* Transição */
+
+}
+
+  /* Alterar cor */
+
+}
+
+  /* aumentar sombra */
+
+}
+
 </style>
 </head>
+
 <body>
 
-  <div class="cartao-perfil">
-    <div style="text-align: center;">
-      <img class="foto" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200" alt="Avatar">
-    </div>
+<div class="cartao-perfil">
 
-    <div class="textos">
-      <h2>João Desenvolvedor</h2>
-      <p style="color: gray;">Especialista Front-end</p>
-      <button class="btn-seguir">Seguir Perfil</button>
-    </div>
-
-    <div class="estatisticas">
-      <div style="text-align: center;">
-        <strong>150</strong><br><small>Projetos</small>
-      </div>
-      <div style="text-align: center;">
-        <strong>12K</strong><br><small>Seguidores</small>
-      </div>
-      <div style="text-align: center;">
-        <strong>3K</strong><br><small>Likes</small>
-      </div>
-    </div>
+  <div style="text-align:center;">
+    <img class="foto"
+    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200"
+    alt="Avatar">
   </div>
+
+  <div class="textos">
+    <h2>João Desenvolvedor</h2>
+    <p style="color: gray;">Especialista Front-end</p>
+
+    <button class="btn-seguir">
+      Seguir Perfil
+    </button>
+  </div>
+
+  <div class="estatisticas">
+
+    <div>
+      <strong>150</strong>
+      <br>
+      <small>Projetos</small>
+    </div>
+
+    <div>
+      <strong>12K</strong>
+      <br>
+      <small>Seguidores</small>
+    </div>
+
+    <div>
+      <strong>3K</strong>
+      <br>
+      <small>Likes</small>
+    </div>
+
+  </div>
+
+</div>
 
 </body>
 </html>`}
