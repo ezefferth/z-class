@@ -571,13 +571,24 @@ body {
         {/* CONCLUSÃO */}
         <div className="border-t-2 border-blue-200 pt-8 mt-10">
           <h2 className="text-2xl font-bold mb-4 text-blue-800">9. O Fim do Começo</h2>
+
           <p>
-            Uau! Você acabou de passar da fase de páginas estáticas e engessadas para interfaces dinâmicas e incrivelmente alinhadas.
-            Compreender o <strong>Box Model</strong> para afastar caixas, e o <strong>Flexbox</strong> para alinhá-las internamente,
-            te coloca anos-luz à frente no desenvolvimento front-end.
+            Até aqui, você aprendeu os fundamentos que sustentam praticamente todo o desenvolvimento visual na web.
+            Entender o <strong>Box Model</strong> permite controlar com precisão os espaçamentos entre os elementos,
+            enquanto o <strong>Flexbox</strong> resolve um dos maiores desafios do front-end: alinhar e organizar
+            conteúdos dentro da página.
           </p>
+
+          <p className="mt-3">
+            Com esses conceitos, você já consegue estruturar interfaces muito mais organizadas e profissionais.
+            Porém, o CSS ainda possui um universo enorme de possibilidades que vão muito além de cores e espaçamentos.
+          </p>
+
           <p className="mt-3 font-semibold text-lg text-blue-600">
-            Na Aula 5, subiremos mais um degrau. Vamos dominar de vez layouts avançados com o CSS Grid e aprender a técnica de "Media Queries" para que nossos sites fiquem perfeitos também nas telas de celulares!
+            Na próxima aula vamos aprofundar o CSS explorando seletores mais poderosos, pseudo-classes como
+            <code className="mx-1">:hover</code>, <code className="mx-1">:focus</code>,
+            seletores de filhos (<code className="mx-1">child selectors</code>), além de efeitos visuais e
+            interações que tornam as interfaces muito mais dinâmicas e profissionais.
           </p>
         </div>
 
