@@ -34,7 +34,7 @@ const disciplinas = {
   ],
   "Análise de Algoritmos": ["Aula 1", "Aula 2"],
   "Introdução a Computação": ["Aula 0", "Aula 1"],
-  "Desenvolvimento de Aplicações Móveis": ["Aula 0"]
+  "Desenvolvimento de Aplicações Móveis": ["Aula 0", "Aula 1"]
 };
 
 export function slugify(text: string): string {
