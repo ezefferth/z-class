@@ -8,9 +8,12 @@ import {
   Toolbar,
   Box,
   Collapse,
+  IconButton,
 } from "@mui/material";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -29,10 +32,8 @@ const disciplinas = {
     "Aula 3",
     "Aula 4",
   ],
-  "Análise de Algoritmos": [
-    "Aula 1",
-    "Aula 2"
-  ]
+  "Análise de Algoritmos": ["Aula 1", "Aula 2"],
+  "Introdução a Computação": ["Aula 0", "Aula 1"],
 };
 
 export function slugify(text: string): string {
@@ -51,9 +52,8 @@ export default function DrawerAulas({
   const router = useRouter();
   const pathname = usePathname();
 
-  // disciplina e aula atualmente ativa pela rota
   const pathParts = pathname.split("/").filter(Boolean);
-  const activeDiscSlug = pathParts[1]; // /aulas/[disciplina]/[aula]
+  const activeDiscSlug = pathParts[1];
   const activeAulaSlug = pathParts[2];
 
   const [openDisciplinas, setOpenDisciplinas] = useState<
@@ -69,7 +69,13 @@ export default function DrawerAulas({
 
   const drawerContent = (
     <div>
-      <Toolbar />
+      {/* Header do Drawer com botão de fechar */}
+      <Toolbar sx={{ display: "flex", justifyContent: "flex-end" }}>
+        <IconButton onClick={handleDrawerToggle}>
+          <CloseIcon />
+        </IconButton>
+      </Toolbar>
+      
       <List>
         {Object.entries(disciplinas).map(([disciplina, aulas]) => {
           const disciplinaSlug = slugify(disciplina);
@@ -77,7 +83,6 @@ export default function DrawerAulas({
 
           return (
             <Box key={disciplina}>
-              {/* DISCIPLINA */}
               <ListItemButton onClick={() => toggleDisciplina(disciplina)}>
                 <ListItemText
                   primary={disciplina}
@@ -88,7 +93,6 @@ export default function DrawerAulas({
                 {openDisciplinas[disciplina] ? <ExpandLess /> : <ExpandMore />}
               </ListItemButton>
 
-              {/* AULAS */}
               <Collapse
                 in={openDisciplinas[disciplina]}
                 timeout="auto"
@@ -108,7 +112,7 @@ export default function DrawerAulas({
                           backgroundColor: isAulaAtiva
                             ? "rgba(0,0,0,0.1)"
                             : "transparent",
-                          transition: "all 0.25s ease", // 👈 animação suave
+                          transition: "all 0.25s ease",
                           "& .MuiListItemText-primary": {
                             paddingLeft: isAulaAtiva ? "8px" : "0px",
                             transition: "all 0.25s ease",
@@ -134,7 +138,29 @@ export default function DrawerAulas({
 
   return (
     <>
-      {/* MOBILE */}
+      {/* BOTÃO HAMBÚRGUER FLUTUANTE */}
+      {/* Ele some automaticamente quando o menu está aberto para não sobrepor o botão de fechar */}
+      {!mobileOpen && (
+        <IconButton
+          color="inherit"
+          aria-label="abrir menu"
+          edge="start"
+          onClick={handleDrawerToggle}
+          sx={{
+            position: "fixed",
+            top: 16,
+            left: 16,
+            zIndex: 1100, // Garante que fique acima do conteúdo da página
+            backgroundColor: "white",
+            boxShadow: 2,
+            "&:hover": { backgroundColor: "#f5f5f5" },
+          }}
+        >
+          <MenuIcon />
+        </IconButton>
+      )}
+
+      {/* DRAWER MOBILE (Sobrepõe o conteúdo) */}
       <Drawer
         variant="temporary"
         open={mobileOpen}
@@ -144,22 +170,24 @@ export default function DrawerAulas({
           display: { xs: "block", sm: "none" },
           "& .MuiDrawer-paper": {
             width: drawerWidth,
+            boxSizing: "border-box",
           },
         }}
       >
         {drawerContent}
       </Drawer>
 
-      {/* DESKTOP */}
+      {/* DRAWER DESKTOP (Empurra o conteúdo) */}
       <Drawer
-        variant="permanent"
+        variant="persistent" // <-- Mudado de "permanent" para "persistent"
+        open={mobileOpen}    // <-- Agora obedece ao estado de abertura
         sx={{
           display: { xs: "none", sm: "block" },
           "& .MuiDrawer-paper": {
             width: drawerWidth,
+            boxSizing: "border-box",
           },
         }}
-        open
       >
         {drawerContent}
       </Drawer>
