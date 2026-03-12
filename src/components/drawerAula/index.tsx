@@ -34,6 +34,7 @@ const disciplinas = {
   ],
   "Análise de Algoritmos": ["Aula 1", "Aula 2"],
   "Introdução a Computação": ["Aula 0", "Aula 1"],
+  "Desenvolvimento de Aplicações Móveis": ["Aula 0"]
 };
 
 export function slugify(text: string): string {
@@ -75,7 +76,7 @@ export default function DrawerAulas({
           <CloseIcon />
         </IconButton>
       </Toolbar>
-      
+
       <List>
         {Object.entries(disciplinas).map(([disciplina, aulas]) => {
           const disciplinaSlug = slugify(disciplina);
